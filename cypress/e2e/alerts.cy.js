@@ -40,7 +40,7 @@ describe('Alerts Tests', () => {
     cy.window().then((win) => {
       cy.stub(win, 'prompt').returns(testName);
     });
-    cy.get('#promtButton').click();
+    cy.get('#promptButton').click();
     cy.get('#promptResult').should('contain', `You entered ${testName}`);
   });
 });
